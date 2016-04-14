@@ -1,0 +1,22 @@
+{
+  "name": "splinter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.20.0",
+    "compression": "^1.6.1",
+    "concat-files": "^0.1.0",
+    "express": "^4.13.4",
+    "natural": "^0.4.0",
+    "request": "^2.70.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

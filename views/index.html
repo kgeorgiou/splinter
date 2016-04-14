@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="splinter">
+<head>
+    <title>Splinter.</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="KG, CA">
+    <meta name="description" content="Splinter">
+
+    <link rel="icon" href="icons/splinter.gif" type="image/x-icon" />
+
+    <script src="bower_components/angular/angular.min.js" type="application/javascript"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+    <link href="bower_components/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet" type="text/css">
+
+    <script src="build/js/splinter.min.js" type="application/javascript"></script>
+    <link href="build/css/splinter.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body-white">
+
+    <div align="center" ng-controller="SplinterController" ng-cloak>
+        <a href="/"><img id="logo" src="icons/splinter.gif" width="150" height="123" onmouseover="this.src='icons/splinter.png'" onmouseout="this.src='icons/splinter.gif'"/></a>
+        <h2 align="center">Splinter</h2>
+        <form name="searchTermForm" class="search-container" ng-submit="getSynonyms()">
+            <input name="longUrl" id="input-term" placeholder="Enter a URL for semantic analysis." size="2048"
+                   autocomplete="on" ng-model="term" data-ng-required="true">
+            <input value="GO" type="submit" class="search-button btn-bw" formnovalidate/>
+        </form>
+        <div ng-show="showResults()" class="results-container">
+            <h3>Semantic tags related to {{displayedTerm}}</h3>
+            <p class="chasm">&nbsp;</p>
+            <div>
+                <span class="htag" ng-repeat="similar in similarsList | orderBy">#{{similar | lowercase}}</span>
+            </div>
+        </div>
+        <div ng-show="isResultEmpty()" class="results-container">
+            <h3>"{{displayedTerm}}" could not be reached.</h3>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <link href='//fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42936084-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</footer>
+
+</html>

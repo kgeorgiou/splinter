@@ -1,0 +1,20 @@
+{
+  "name": "splinter-views",
+  "version": "0.0.1",
+  "description": "splinter front end",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KG, CA",
+  "license": "GPLv2",
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ng-constant": "^1.1.0",
+    "grunt": "^0.4.5"
+  }
+}
